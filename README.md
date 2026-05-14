@@ -1,5 +1,11 @@
 import Purchases from 'react-native-purchases';
 import Paywall from '@revenuecat/purchases-ui-react-native';
+const showPaywall = async () => {
+    const result = await Paywall.presentPaywall();
+    if (result === 'PURCHASED') {
+        // Success! The user paid.
+    }
+};
 
 const FONTS = `@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');`;
 
